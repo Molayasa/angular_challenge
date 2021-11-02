@@ -1,0 +1,28 @@
+.sidebar {
+  display: flex;
+  width: 100px;
+  flex-flow: column wrap;
+  gap: 50px;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+}
+
+.logo {
+  margin: 25px auto;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #08004e;
+  border-radius: 50%;
+}
+
+.clock-image {
+  filter: invert(91%) sepia(91%) saturate(38%) hue-rotate(339deg)
+    brightness(110%) contrast(110%);
+}

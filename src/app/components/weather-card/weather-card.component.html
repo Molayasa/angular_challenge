@@ -1,0 +1,66 @@
+<div class="weather-card-container">
+  <h3>
+    {{ city.name }}, {{ city.country }}
+    <fa-icon
+      (click)="onDelete(city)"
+      [ngStyle]="{ color: '#9c9c9c' }"
+      [icon]="faTimes"
+    ></fa-icon>
+  </h3>
+  <div class="weather-temp-info">
+    <div class="temp-number">
+      {{ city.temp }}<span class="degree-symbol">°</span>
+    </div>
+    <div class="weather-letters">
+      <app-button
+        (btnClick)="changeToCelsius(city)"
+        color="#ff4d00"
+        text="C"
+        bgColor="white"
+        active
+      ></app-button>
+      <app-button
+        (btnClick)="changeToFahrenheit(city)"
+        color="#999999"
+        text="F"
+        bgColor="white"
+      ></app-button>
+      <app-button
+        (btnClick)="changeToKelvin(city)"
+        color="#999999"
+        text="K"
+        bgColor="white"
+      ></app-button>
+    </div>
+  </div>
+  <div class="weather-type">
+    <div *ngIf="city.celsius < 19">
+      <img
+        src="assets/icons/coldWeather.svg"
+        alt=""
+        width="30"
+        height="24"
+        class="d-inline-block align-text-top"
+      /><span> Cold</span>
+    </div>
+    <div *ngIf="city.celsius > 19.1 && city.celsius < 26">
+      <img
+        src="assets/icons/warmWeather.svg"
+        alt=""
+        width="30"
+        height="24"
+        class="d-inline-block align-text-top"
+      /><span> Warm</span>
+    </div>
+    <div *ngIf="city.celsius > 26.1">
+      <img
+        src="assets/icons/hotWeather.svg"
+        alt=""
+        width="30"
+        height="24"
+        class="d-inline-block align-text-top"
+      /><span> Hot</span>
+    </div>
+  </div>
+  <app-button color="white" text="Update" bgColor="#ff4d00"></app-button>
+</div>

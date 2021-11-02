@@ -1,0 +1,55 @@
+.weather-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 240px;
+  min-height: 240px;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 2px 1px 1px rgb(61 61 61 / 22%);
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.weather-temp-info {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.temp-number {
+  font-size: 3.5rem;
+  color: #ff4d00;
+  margin: 8px;
+}
+
+.weather-letters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.degree-symbol {
+  font-size: 3rem;
+  vertical-align: top;
+}
+
+.weather-type {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+fa-icon {
+  margin-left: 30px;
+  margin-top: -20px;
+}

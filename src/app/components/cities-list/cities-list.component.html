@@ -1,0 +1,13 @@
+<div class="cities-container">
+  <h1 class="app-title">{{ title }}</h1>
+  <app-city-selector
+    (onCitySelection)="searchAndAddCity($event)"
+  ></app-city-selector>
+  <div class="weather-cards-container">
+    <app-weather-card
+      *ngFor="let city of cities"
+      [city]="city"
+      (onDeleteCity)="deleteCity(city)"
+    ></app-weather-card>
+  </div>
+</div>

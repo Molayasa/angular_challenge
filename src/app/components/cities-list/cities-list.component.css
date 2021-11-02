@@ -1,0 +1,20 @@
+.app-title {
+  color: #fc6320;
+}
+
+.cities-container {
+  background-color: #eef0f6;
+  background-repeat: repeat-y;
+  padding: 25px;
+  width: auto;
+  height: 100%;
+}
+
+.weather-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  width: auto;
+}

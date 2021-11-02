@@ -1,0 +1,14 @@
+<div class="city-selector-container">
+  <mat-form-field>
+    <mat-select
+      panelClass="city-selector"
+      placeholder="Select a City"
+      [(ngModel)]="city"
+      (selectionChange)="onSelectionChange(city)"
+    >
+      <mat-option *ngFor="let city of citiesNames" [value]="city.name">{{
+        city.name.charAt(0).toUpperCase() + city.name.slice(1)
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
